@@ -1,11 +1,41 @@
-import axios from 'axios' 
+import axios from 'axios'; 
+import React, { useState, useEffect } from 'react'; 
+import './statboticsaxios.css'
 
-const apiresponse()=> {
+const Apiresponse= ()=> { 
 
-const statbotics_url = 'https://api.statbotics.io/v3/' 
+const [responseBody, setResponseBody] = useState(null) 
+const [error, setError] = useState(null) 
+     
+const statbotics_url = 'https://api.statbotics.io/v3/'; 
 
-var response = axios.get(``${statbotics_url}``) 
-return <div>{response}</div> 
-} 
+useEffect (() => {
+axios.get(statbotics_url)
+    .then(response => {
+        setResponseBody(response.data)
+        console.log('datacollected')
+    }) 
+    .catch(err => {
+        setError(err) 
+        console.log("error detected", err) 
+    }); 
+}, []); 
 
-export default apiresponse  
+
+if(!responseBody && !error) {
+    return(<div className='response'>Loading....</div>) 
+}
+
+if(error) {
+    return(<div className='response'>{error.message}</div>)
+}
+
+
+
+
+return (<div className='response'>{JSON.stringify(responseBody)}</div>)
+
+
+};  
+
+export default Apiresponse 

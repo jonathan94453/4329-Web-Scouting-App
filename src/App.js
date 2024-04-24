@@ -1,10 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
-import './AxiosDevelopment/statboticsaxios'
+import React from 'react'; 
+import Apiresponse from './AxiosDevelopment/statboticsaxios'
 function App() {
   return (
-    <div className="App">
-      
+    <div>
+      <Apiresponse/>
     </div>
   );
 }
