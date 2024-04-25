@@ -5,8 +5,9 @@ import './statboticsaxios.css'
 const Apiresponse= ()=> { 
 
 const [responseBody, setResponseBody] = useState(null) 
-const [error, setError] = useState(null) 
+const [error, setError] = useState(null)  
      
+
 const statbotics_url = 'https://api.statbotics.io/v3/'; 
 
 useEffect (() => {
