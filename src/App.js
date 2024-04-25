@@ -1,9 +1,13 @@
 import React from 'react'; 
-import Apiresponse from './AxiosDevelopment/statboticsaxios'
+import Apiresponse from './AxiosDevelopment/statboticsaxios' 
+import Tbaresponse from './TBAeventfunction/tbaevent';
 function App() {
   return (
     <div>
-      <Apiresponse/>
+      <Apiresponse/> 
+      <p>
+        {Tbaresponse} 
+      </p>
     </div>
   );
 }
