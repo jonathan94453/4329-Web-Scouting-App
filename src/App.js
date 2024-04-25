@@ -1,13 +1,18 @@
 import React from 'react'; 
 import Apiresponse from './AxiosDevelopment/statboticsaxios' 
 import Tbaresponse from './TBAeventfunction/tbaevent';
+import Frcevents from "./FRCEVENTSAPI/frcevents";
+import './AxiosDevelopment/statboticsaxios.css'
 function App() {
   return (
     <div>
       <Apiresponse/> 
-      <p>
-        {Tbaresponse} 
-      </p>
+      <div className='response'>
+       <Tbaresponse/>
+      </div>
+      <div className= 'response' >
+          <Frcevents/>
+      </div>
     </div>
   );
 }

@@ -14,11 +14,11 @@ useEffect (() => {
 axios.get(statbotics_url)
     .then(response => {
         setResponseBody(response.data)
-        console.log('datacollected')
+        console.log('statbotics datacollected')
     }) 
     .catch(err => {
         setError(err) 
-        console.log("error detected", err) 
+        console.log("statbotics error detected", err)
     }); 
 }, []); 
 
