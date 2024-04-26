@@ -1,6 +1,6 @@
 import React from 'react'; 
-import Apiresponse from './StatboticsApi/statboticsaxios'
-import Tbaresponse from './TBAeventfunction/tbaevent';
+import Apiresponse from './StatboticsApi/statboticsaxios.js'
+import Tbaresponse from './TBAeventfunction/tbaevent.js';
 import FrcEvents from "./FRCEVENTSAPI/frcevents.js";
 import './StatboticsApi/statboticsaxios.css'
 function App() {

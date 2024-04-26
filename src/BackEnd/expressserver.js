@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 });
 
 //Statbotics Api test
-app.get('/statboticsapi', (req, res) => {
+app.get('/status/statbotics', (req, res) => {
     axios.get(statboticsurl)
         .then(response => {
             res.send(response.data)
@@ -39,7 +39,7 @@ app.get('/statboticsapi', (req, res) => {
 
 //Frc events test
 
-app.get('/frceventsapi', (req, res) => [
+app.get('/status/TBA', (req, res) => [
     axios.get(frcapiurl, {
         auth: {
             username: frcapi_username,
@@ -57,7 +57,7 @@ app.get('/frceventsapi', (req, res) => [
         })
 ])
 
-app.get('/tbaapi', (req, res) => {
+app.get('/status/FRC', (req, res) => {
     axios.get(TBAurl, {
         headers: {
             'X-TBA-Auth-Key': TBAapikey
