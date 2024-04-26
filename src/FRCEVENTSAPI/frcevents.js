@@ -2,19 +2,11 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 const FrcEvents= () => {
 
-    const frcapiurl = "https://frc-api.firstinspires.org/v3.0/2024"
-    const frcapiusername = 'jonathancino'
-    const frcapipassword = 'f1d91cba-8f45-429f-bde5-03878c819edb'
     const [frcresponse, setfrcresponse] = useState(null)
     const [frcerror, setfrcerror] = useState(null)
-
+    const server_frcapi_url = 'http://localhost:5000/frceventsapi'
     useEffect(() => {
-        axios.get(frcapiurl, {
-            auth: {
-                username: frcapiusername,
-                password: frcapipassword
-            }
-        })
+        axios.get(server_frcapi_url)
             .then(response => {
                 setfrcresponse(response.data)
                 console.log("data is colleceted from frc events api")

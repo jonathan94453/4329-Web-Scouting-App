@@ -8,7 +8,7 @@ const [responseBody, setResponseBody] = useState(null)
 const [error, setError] = useState(null)  
      
 
-const statbotics_url = 'https://api.statbotics.io/v3/'; 
+const statbotics_url = 'http://localhost:5000/statboticsapi';
 
 useEffect (() => {
 axios.get(statbotics_url)
