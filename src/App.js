@@ -1,8 +1,7 @@
 import React from 'react'; 
-import Apiresponse from './AxiosDevelopment/statboticsaxios' 
+import Apiresponse from './StatboticsApi/statboticsaxios'
 import Tbaresponse from './TBAeventfunction/tbaevent';
-import Frcevents from "./FRCEVENTSAPI/frcevents";
-import './AxiosDevelopment/statboticsaxios.css'
+import './StatboticsApi/statboticsaxios.css'
 function App() {
   return (
     <div>
@@ -10,9 +9,7 @@ function App() {
       <div className='response'>
        <Tbaresponse/>
       </div>
-      <div className= 'response' >
-          <Frcevents/>
-      </div>
+
     </div>
   );
 }
