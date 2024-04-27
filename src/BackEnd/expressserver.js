@@ -39,7 +39,7 @@ app.get('/status/statbotics', (req, res) => {
 
 //Frc events test
 
-app.get('/status/TBA', (req, res) => [
+app.get('/status/FRC', (req, res) => [
     axios.get(frcapiurl, {
         auth: {
             username: frcapi_username,
@@ -57,7 +57,7 @@ app.get('/status/TBA', (req, res) => [
         })
 ])
 
-app.get('/status/FRC', (req, res) => {
+app.get('/status/TBA', (req, res) => {
     axios.get(TBAurl, {
         headers: {
             'X-TBA-Auth-Key': TBAapikey
