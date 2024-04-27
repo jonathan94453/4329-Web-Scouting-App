@@ -1,7 +1,15 @@
+//Dependencies from Node
 import express from 'express';
 import axios from 'axios'
 import cors from 'cors'
 import 'dotenv/config'
+
+//Router imports
+
+import teamRouter from './EPA.js'
+
+
+//Variables
 const app = express()
 const port = 5000
 const statboticsurl = "https://api.statbotics.io/v3/"
@@ -18,7 +26,7 @@ const corsOptions = {
     optionsSuccessStatus: 200
 }
 app.use(cors(corsOptions));
-
+app.use('/team', teamRouter)
 
 //Base key
 app.get('/', (req, res) => {
