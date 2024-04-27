@@ -7,10 +7,11 @@ const router = express.Router()
 
 router.get('/:teamnumber', (req, res) => {
 
-
-    axios.get('https://api.statbotics.io/v3/team/4329')
+    const teamnumber = req.params.teamnumber;
+    console.log(teamnumber)
+    axios.get('https://api.statbotics.io/v3/team/' + teamnumber)
         .then(response => {
-            res.send(response.data)
+            res.json({currentnorm_epa: response.data.norm_epa.current})
         })
         .catch(err => {
             console.log(err.message)

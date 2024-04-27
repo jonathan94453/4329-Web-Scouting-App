@@ -18,6 +18,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "server": "node src/Backend/expressserver.js",
     "start": "concurrently \"npm run start-frontend\" \"npm run start-backend\"",
     "start-frontend": "react-scripts start",
     "start-backend": "node src/BackEnd/expressserver.js",

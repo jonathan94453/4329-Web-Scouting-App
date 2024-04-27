@@ -6,8 +6,8 @@ import 'dotenv/config'
 
 //Router imports
 
-import teamRouter from './EPA.js'
-
+import TeamEpaRouter from './Statbotics-RESTAPI Calls/Statbotics-Epa/EPA.js'
+import TeamRouter from './FRC Events API Calls/FRC-Team-Calls/TeamName.js'
 
 //Variables
 const app = express()
@@ -26,7 +26,8 @@ const corsOptions = {
     optionsSuccessStatus: 200
 }
 app.use(cors(corsOptions));
-app.use('/team', teamRouter)
+app.use('/EPA', TeamEpaRouter)
+app.use('/Team', TeamRouter)
 
 //Base key
 app.get('/', (req, res) => {
