@@ -1,14 +1,15 @@
 import express from 'express';
 import axios from 'axios'
 import cors from 'cors'
+import 'dotenv/config'
 const app = express()
 const port = 5000
 const statboticsurl = "https://api.statbotics.io/v3/"
 const TBAurl = "https://www.thebluealliance.com/api/v3/status"
-const TBAapikey = "WK3zLigLRXwRCK7ppcpOROcjZskGKoEGEVQwGZGvTGDGKtYBtyL5wlg586Tf200h"
-const frcapiurl = "https://frc-api.firstinspires.org/v3.0/"
-const frcapi_username = "jonathancino"
-const frcapi_key = "f1d91cba-8f45-429f-bde5-03878c819edb"
+const TBAapikey = process.env.TBA_API_KEY
+const frcapiurl = 'https://frc-api.firstinspires.org/v3.0/'
+const frcapi_username = process.env.FRC_API_USERNAME
+const frcapi_key = process.env.FRC_API_KEY
 
 
 const corsOptions = {
