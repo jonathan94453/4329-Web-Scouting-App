@@ -4,7 +4,7 @@ const FrcEvents= () => {
 
     const [frcresponse, setfrcresponse] = useState(null)
     const [frcerror, setfrcerror] = useState(null)
-    const server_frcapi_url = 'http://localhost:5000/status/FRC'
+    const server_frcapi_url = 'http://localhost:4000/status/FRC'
     useEffect(() => {
         axios.get(server_frcapi_url)
             .then(response => {

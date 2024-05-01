@@ -2,7 +2,7 @@
     import axios from 'axios'
 
     const Tbaresponse= ()=> {
-        const tbaurl = 'http://localhost:5000/status/TBA'
+        const tbaurl = 'http://localhost:4000/status/TBA'
         const [responsed, setresponsed] = useState(null) 
         const [error, seterror] = useState(null) 
 
