@@ -1,20 +1,20 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import axios from 'axios'
 
 const Test_team_input= () => {
-    const [senddata, setsenddata] = useState(null)
-    const [responsed, SetResponsed] = useState(null)
-    const [error, seterror] = useState(null)
-
-    const handlesubmit= (e) => {
-        e.preventDefault();
-        const value = e.target.value
-        setsenddata(value)
-        console.log("default")
-    }
+    const [senddata, setsenddata] = useState('')
+    const [responsed, SetResponsed] = useState('')
+    const [error, seterror] = useState('')
 
     const handledatachange= (e) => {
+     const value = e.data.change
+     setsenddata(value)
+
+    }
+
+    const handlesubmit= (e) => {
         const value = e.target.value
+        console.log(e.target.value)
         setsenddata(value)
         axios.get('https//localhost:4000/team/frc' + senddata)
             .then (response => {
@@ -25,7 +25,9 @@ const Test_team_input= () => {
             })
     }
 
-
+if(error) {
+    console.log(error.message)
+}
 
     return (
             <div>
