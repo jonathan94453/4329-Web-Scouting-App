@@ -24,7 +24,7 @@ const Test_team_input= () => {
                 seterror(err.message)
             })
     }
-
+//
 if(error) {
     console.log(error.message)
 }
