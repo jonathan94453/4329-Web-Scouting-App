@@ -7,8 +7,7 @@ const router = express.Router()
 
 router.get('/:TeamNumber', (req, res) => {
     const TeamNumber = req.params.TeamNumber
-
-    axios.get('https://www.thebluealliance.com/api/v3' + TeamNumber, {
+    axios.get('https://www.thebluealliance.com/api/v3/team/frc' + TeamNumber, {
         headers: {
             'X-TBA-Auth-Key': process.env.TBA_API_KEY
         }
